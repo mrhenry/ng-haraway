@@ -1,0 +1,28 @@
+{
+  "name": "ng-haraway",
+  "version": "0.0.0",
+  "description": "Haraway library for Angular",
+  "repository": "https://github.com/fd/ng-haraway.git",
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "scripts": {
+    "test": "mocha test",
+    "build": "rm -rf lib && tsc"
+  },
+  "keywords": [
+    "haraway",
+    "angular"
+  ],
+  "author": "Simon Menke",
+  "license": "MIT",
+  "devDependencies": {
+    "tsd": "^0.6.4",
+    "typescript": "^1.6.2"
+  },
+  "dependencies": {
+    "angular": "^1.4.6"
+  },
+  "jspm": {
+    "format": "cjs"
+  }
+}
