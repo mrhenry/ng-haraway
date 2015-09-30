@@ -1,6 +1,6 @@
 {
   "name": "ng-haraway",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Haraway library for Angular",
   "repository": "https://github.com/fd/ng-haraway.git",
   "main": "lib/index.js",
