@@ -6,7 +6,7 @@
   "main": "lib/index.js",
   "typings": "lib/index",
   "scripts": {
-    "test": "mocha test",
+    "test": "echo 'no tests...'",
     "build": "rm -rf lib && tsc"
   },
   "keywords": [
