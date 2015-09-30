@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="haraway_endpoint" content="http://api.assets.sh" />
+    <meta name="haraway_token" content="eyJhY2Nlc3Nfa2V5IjoiODVmMTY3ZTkzNGI1NTkwMCIsImV4cGlyYXRpb24iOjE0NDM2MTM4MjUsInJvbGUiOiJ1cGxvYWRlciIsIm5vbmNlIjoiY2YzVmtPdmZPN04zcHdYN0doSWhXcmpaQllkOHE5OERnOHJLcGlXR1FZRS9IcHNUQS85N2dMemttYkVZRHR2U2lUTmtZLzdzY3RwQ1dkNURscUlCNGc9PSIsInNpZ25hdHVyZSI6InpNWUJMSjFXMWxmdUdmTHBDb3FTUnljSWd4Z3BiWWQzbnlTY3lhYlY0dnc9In0=" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.js" charset="utf-8"></script>
+    <script>
+      System.config({
+        baseURL: '/',
+        defaultJSExtensions: true,
+        map:{
+          "angular": "node_modules/angular/index.js",
+        },
+      });
+
+      System.import('example/index.js');
+    </script>
+  </head>
+  <body>
+
+    <button
+      haraway-chooser
+      ng-model="files"
+      profile="images"
+      multiple
+      auto-upload
+      />Choose Some files</button>
+
+
+      <div ng-repeat="file in files">
+        <dl>
+          <dt>file_name</dt>
+          <dd>{{ file.attributes.file_name }}</dd>
+        </dl>
+
+        <dl ng-if="file.$info.type">
+          <dt>type</dt>
+          <dd>{{ file.$info.type }}</dd>
+          <dt>state</dt>
+          <dd>{{ file.$info.state }}</dd>
+          <dt>error</dt>
+          <dd>{{ file.$info.error }}</dd>
+          <dt>size</dt>
+          <dd>{{ file.$info.size }}</dd>
+          <dt>uploaded</dt>
+          <dd>{{ file.$info.uploaded }}</dd>
+          <dt>upload_percentage</dt>
+          <dd>{{ file.$info.upload_percentage }}</dd>
+          <dt>transforms</dt>
+          <dd>{{ file.$info.transforms }}</dd>
+          <dt>transforms_done</dt>
+          <dd>{{ file.$info.transforms_done }}</dd>
+          <dt>transforms_error</dt>
+          <dd>{{ file.$info.transforms_error }}</dd>
+          <dt>transforms_percentage</dt>
+          <dd>{{ file.$info.transforms_percentage }}</dd>
+        </dl>
+
+        <haraway-preview
+          ng-model="file"
+          width="150"
+          height="150"
+          ></haraway-preview>
+
+      </div>
+
+  </body>
+</html>

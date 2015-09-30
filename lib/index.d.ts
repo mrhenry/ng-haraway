@@ -1,2 +1,2 @@
-declare var _default: string;
-export default _default;
+declare var modName: string;
+export default modName;

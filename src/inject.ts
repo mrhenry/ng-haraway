@@ -1,5 +1,5 @@
-const libURL : string = '//s.assets.sh/haraway.js';
-let injected : boolean = false;
+const libURL: string = '//s.assets.sh/haraway.js';
+let injected: boolean = false;
 
 export function injectAPI(): void {
 	if (window['Haraway'] !== undefined) {
