@@ -23,6 +23,11 @@
     "angular": "^1.4.6"
   },
   "jspm": {
-    "format": "cjs"
+    "jspmNodeConversion": false,
+    "format": "cjs",
+    "main": "lib/index.js",
+    "dependencies": {
+      "angular": "jspm:angular"
+    }
   }
 }
